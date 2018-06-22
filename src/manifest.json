@@ -1,0 +1,61 @@
+{
+    "package": "com.jdbfe.knight",
+    "name": "前端录",
+    "versionName": "1.0.1",
+    "versionCode": "5",
+    "minPlatformVersion": "101",
+    "icon": "/common/image/logo.png",
+    "features": [{
+            "name": "system.prompt"
+        },
+        {
+            "name": "system.router"
+        },
+        {
+            "name": "system.shortcut"
+        },
+        {
+            "name": "system.fetch"
+        },
+        {
+            "name": "system.webview"
+        },
+        {
+            "name": "system.storage"
+        },
+        {
+            "name": "system.clipboard"
+        },
+        {
+            "name": "system.share"
+        }
+    ],
+    "permissions": [{
+        "origin": "*"
+    }],
+    "config": {
+        "logLevel": "debug"
+    },
+    "router": {
+        "entry": "home",
+        "pages": {
+            "home": {
+                "component": "index"
+            },
+            "webview": {
+                "component": "index"
+            }
+        }
+    },
+    "display": {
+        "titleBarText": "前端录",
+        "titleBarBackgroundColor": "#ffffff",
+        "titleBarTextColor": "#323233",
+        "titleBarText": "首页",
+        "pages": {
+            "home": {
+                "titleBar": false
+            }
+        }
+    }
+}

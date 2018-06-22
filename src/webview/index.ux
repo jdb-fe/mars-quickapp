@@ -1,0 +1,10 @@
+<import name="loadingBar" src="../component/loading/index.ux"></import>
+
+<template>
+    <stack>
+        <web src="{{url}}" show="{{!loading}}" id="web" ontitlereceive="finish"></web>
+        <loadingBar if="{{loading}}" type="skeleton"></loadingBar>
+    </stack>
+</template>
+<style lang="less" src="./index.less"></style>
+<script src="./index.js"></script>

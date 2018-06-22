@@ -1,0 +1,11 @@
+<script>
+    import './utils/regenerator';
+    import * as Cache from './utils/cache';
+
+    export default {
+        onCreate() {
+            // 读取cache数据
+            this.newsListCache = Cache.get('newsList');
+        }
+    }
+</script>

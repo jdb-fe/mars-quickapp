@@ -1,0 +1,39 @@
+<import name="titleBar" src="../component/title/index.ux"></import>
+
+<template>
+    <stack class="page">
+        <refresh offset="482px" @refresh="refresh" refreshing="{{refreshing}}">
+            <list onscroll="scroll" onscrollbottom="loadMore">
+                <list-item type="banner">
+                    <swiper class="banner" autoplay="true">
+                        <stack class="banner-wrap" for="{{list.slice(0,5)}}">
+                            <image class="banner-image" src="{{$item.thumb}}" onclick="openArticle($item.id, $item.title)"></image>
+                            <text class="banner-title">{{$item.title}}</text>
+                        </stack>
+                    </swiper>
+                </list-item>
+                <block for="list">
+                    <list-item class="item" type="list" onclick="openArticle($item.id, $item.title)">
+                        <div class="item-left">
+                            <div class="item-left-top">
+                                <text class="news-title">{{$item.title}}</text>
+                            </div>
+                            <div class="news-meta">
+                                <text class="news-meta-text">推荐人: {{$item.user ? $item.user.name : 'fe-mars'}}</text>
+                                <text class="news-meta-text">{{dateFormat($item.createAt)}}</text>
+                            </div>
+                        </div>
+                        <image class="news-thumb" src="{{ $item.thumb ? $item.thumb :''}}"></image>
+                    </list-item>
+                </block>
+                <list-item type="load" class="load" show="{{!refreshing}}">
+                    <progress class="load-icon" type="circular" show="{{hasMore}}"></progress>
+                    <text class="load-text">{{hasMore ? '加载中...' : '我也是有底线的'}}</text>
+                </list-item>
+            </list>
+        </refresh>
+        <titleBar opacity="{{titleOpacity}}" show-border="{{showBorder}}"></titleBar>
+    </stack>
+</template>
+<style lang="less" src="./index.less"></style>
+<script src="./index.js"></script>
