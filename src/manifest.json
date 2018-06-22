@@ -51,7 +51,6 @@
         "titleBarText": "前端录",
         "titleBarBackgroundColor": "#ffffff",
         "titleBarTextColor": "#323233",
-        "titleBarText": "首页",
         "pages": {
             "home": {
                 "titleBar": false

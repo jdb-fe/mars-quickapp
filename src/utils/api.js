@@ -18,9 +18,3 @@ export function getNewsList(page = 1) {
         page: page
     }).then(transformResponse);
 }
-
-export function viewNews(id) {
-    return fetch.get(`${APIROOT}/api/post/view`, {
-        id: id
-    });
-}

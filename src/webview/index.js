@@ -1,7 +1,6 @@
 import router from '@system.router';
 import {
-    APIROOT,
-    viewNews
+    APIROOT
 } from '../utils/api';
 
 export default {
@@ -33,7 +32,5 @@ export default {
     },
     finish() {
         this.loading = false;
-        //阅读量增加
-        viewNews(this.id);
     }
 }
