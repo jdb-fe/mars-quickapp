@@ -20,7 +20,7 @@
                             </div>
                             <div class="news-meta">
                                 <text class="news-meta-text">推荐人: {{$item.user ? $item.user.name : 'fe-mars'}}</text>
-                                <text class="news-meta-text">{{dateFormat($item.createAt)}}</text>
+                                <text class="news-meta-text">{{dateFormat($item.createAt, 'MM-dd')}}</text>
                             </div>
                         </div>
                         <image class="news-thumb" src="{{ $item.thumb ? $item.thumb :''}}"></image>
