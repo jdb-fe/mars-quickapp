@@ -1,7 +1,7 @@
 {
     "package": "com.jdbfe.knight",
     "name": "前端录",
-    "versionName": "1.0.1",
+    "versionName": "1.0.2",
     "versionCode": "5",
     "minPlatformVersion": "101",
     "icon": "/common/image/logo.png",
@@ -37,12 +37,15 @@
         "logLevel": "debug"
     },
     "router": {
-        "entry": "home",
+        "entry": "tab",
         "pages": {
             "home": {
                 "component": "index"
             },
             "webview": {
+                "component": "index"
+            },
+            "tab": {
                 "component": "index"
             }
         }

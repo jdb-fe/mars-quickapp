@@ -1,0 +1,17 @@
+
+<template>
+    <list-item class="item" type="list" onclick="openArticle(data.id, data.title)">
+        <div class="item-left">
+            <div class="item-left-top">
+                <text class="news-title">{{data.title}}</text>
+            </div>
+            <div class="news-meta">
+                <text class="news-meta-text">推荐人: {{data.user ? data.user.name : 'fe-mars'}}</text>
+                <text class="news-meta-text">{{dateFormat(data.createAt)}}</text>
+            </div>
+        </div>
+        <image class="news-thumb" src="{{ data.thumb ? data.thumb :''}}"></image>
+    </list-item>
+</template>
+<style lang="less" src="./index.less"></style>
+<script src="./index.js"></script>

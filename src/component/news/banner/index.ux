@@ -1,0 +1,12 @@
+<template>
+    <list-item type="banner">
+        <swiper class="banner" autoplay="true">
+            <stack class="banner-wrap" for="{{banners}}">
+                <image class="banner-image" src="{{$item.thumb}}" onclick="openArticle($item.id, $item.title)"></image>
+                <text class="banner-title">{{$item.title}}</text>
+            </stack>
+        </swiper>
+    </list-item>
+</template>
+<style lang="less" src="./index.less"></style>
+<script src="./index.js"></script>

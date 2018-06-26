@@ -1,0 +1,15 @@
+<template>
+    <tabs onchange="changeTab">
+        <tab-content>
+            <slot></slot>
+        </tab-content>
+        <tab-bar class="tab-bar">
+            <div class="tab-bar-inner" for="{{tabs}}">
+                <image src="/common/image/{{$item.icon}}{{index === $idx ? '.active' : ''}}.png"></image>
+                <text class="tab-bar-text {{index === $idx ? 'active' : ''}}">{{$item.text}}</text>
+            </div>
+        </tab-bar>
+    </tabs>
+</template>
+<style lang="less" src="./index.less"></style>
+<script src="./index.js"></script>

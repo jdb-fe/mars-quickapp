@@ -1,0 +1,20 @@
+
+<import name="newsBanner" src="./banner/index.ux"></import>
+<import name="newsItem" src="./item/index.ux"></import>
+
+<template>
+    <refresh offset="482px" @refresh="refresh" refreshing="{{refreshing}}">
+        <list onscroll="scroll" onscrollbottom="loadMore">
+            <newsBanner banners="{{list.slice(0,5)}}"></newsBanner>
+            <block for="list">
+                <newsItem data="{{$item}}"></newsItem>
+            </block>
+            <list-item type="load" class="load" show="{{!refreshing}}">
+                <progress class="load-icon" type="circular" show="{{hasMore}}"></progress>
+                <text class="load-text">{{hasMore ? '加载中...' : '我也是有底线的'}}</text>
+            </list-item>
+        </list>
+    </refresh>
+</template>
+<style lang="less" src="./index.less"></style>
+<script src="./index.js"></script>
