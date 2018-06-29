@@ -1,8 +1,8 @@
 {
     "package": "com.jdbfe.knight",
     "name": "前端录",
-    "versionName": "1.0.1",
-    "versionCode": "5",
+    "versionName": "1.0.2",
+    "versionCode": "6",
     "minPlatformVersion": "101",
     "icon": "/common/image/logo.png",
     "features": [{
